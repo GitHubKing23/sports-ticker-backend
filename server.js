@@ -11,9 +11,9 @@ console.log('Health Route Type:', typeof healthRoutes);
 
 const app = express();
 
-app.use(cors({
-    origin: ['https://sportifyinsider.com', 'http://localhost:3000']
-}));
+// ⚠️ Temporary: Allow ALL origins for testing
+app.use(cors());
+
 app.use(compression());
 app.use(morgan('combined'));
 app.use(express.json());
